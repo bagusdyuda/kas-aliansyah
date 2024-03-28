@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kasmasuk;
 use Illuminate\Http\Request;
 
 class KasmasukController extends Controller
@@ -11,7 +12,8 @@ class KasmasukController extends Controller
      */
     public function index()
     {
-        return view('kasmasuk.data-kasmasuk');
+        $kasmasuk = Kasmasuk::paginate(5);
+        return view('kasmasuk.data-kasmasuk',compact('kasmasuk'));
     }
 
     /**
@@ -27,7 +29,17 @@ class KasmasukController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        Kasmasuk::create([
+        'tanggal' => $request->tanggal,
+        'nota' => $request->nota,
+        'penyerah' => $request->penyerah,
+        'id_user' => $request->id_user,
+        'dari_kas' => $request->dari_kas,
+        'plot' => $request->plot,
+        'nominal' => $request->nominal,
+        ]);
+
+        return redirect('data-kasmasuk')->with('toast_success', 'Data Berhasil Disimpan');
     }
 
     /**
@@ -41,9 +53,10 @@ class KasmasukController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
-        //
+        $kasmasuk = Kasmasuk::findorfail($id);
+        return view('kasmasuk.edit-kasmasuk',compact('kasmasuk'));
     }
 
     /**
@@ -51,7 +64,10 @@ class KasmasukController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $kasmasuk = Kasmasuk::findorfail($id);
+        $kasmasuk->update($request->all());
+
+        return redirect('data-kasmasuk')->with('toast_success', 'Data Berhasil Diubah');
     }
 
     /**
@@ -59,6 +75,8 @@ class KasmasukController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $kasmasuk = Kasmasuk::findorfail($id);
+        $kasmasuk->delete();
+        return back()->with('info', 'Data Berhasil Dihapus');
     }
 }

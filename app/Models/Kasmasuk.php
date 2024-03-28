@@ -9,6 +9,7 @@ class Kasmasuk extends Model
 {
     use HasFactory;
 
+    protected $table = 'kas_masuk';
     protected $fillable = [
         'tanggal',
         'nota',

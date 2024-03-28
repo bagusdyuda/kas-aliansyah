@@ -21,40 +21,40 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="card-header">
-                                <h3>Tambah Data</h3>
+                                <h3>Edit Data</h3>
                                 <div class="card-body">
-                                    <form action="{{ route('simpan-kasmasuk') }}" method="POST">
+                                    <form action="{{ url('update-kasmasuk',$kasmasuk->id) }}" method="POST">
                                         @csrf
                                         <div class="form-group">
                                             <label for="exampleInputEmail1" class="form-label">Tanggal</label>
-                                            <input type="text" name="tanggal" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                            <input type="text" name="tanggal" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $kasmasuk->tanggal }}">
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1" class="form-label">Nota</label>
-                                            <input type="text" name="nota" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                            <input type="text" name="nota" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $kasmasuk->nota }}">
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1" class="form-label">Penyerah</label>
-                                            <input type="text" name="penyerah" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                            <input type="text" name="penyerah" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $kasmasuk->penyerah }}">
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1" class="form-label">Id User</label>
-                                            <input type="number" name="id_user" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                            <input type="number" name="id_user" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $kasmasuk->id_user }}">
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1" class="form-label">Dari Kas</label>
-                                            <input type="text" name="dari_kas" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                            <input type="text" name="dari_kas" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $kasmasuk->dari_kas }}">
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1" class="form-label">Plot</label>
-                                            <input type="text" name="plot" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                            <input type="text" name="plot" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $kasmasuk->plot }}">
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1" class="form-label">Nominal</label>
-                                            <input type="number" name="nominal" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                            <input type="number" name="nominal" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $kasmasuk->nominal }}">
                                         </div>
                                         <div class="form-group">
-                                            <button type="submit" class="btn btn-success">Simpan Data</button>
+                                            <button type="submit" class="btn btn-primary">Ubah Data</button>
                                         </div>
                                     </form>
                                 </div>
