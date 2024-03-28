@@ -42,15 +42,15 @@
                 <a href="#" class="nav-link">
                     <i class="nav-icon fas fa-circle nav-icon"></i>
                     <p>
-                        Two-level menu
+                        Kas Brankas
                         <i class="fas fa-angle-left right"></i>
                     </p>
                 </a>
                 <ul class="nav nav-treeview" style="display: none;">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{ route('data-kasmasuk') }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
-                            <p>Child menu</p>
+                            <p>Uang Masuk</p>
                         </a>
                     </li>
                 </ul>
