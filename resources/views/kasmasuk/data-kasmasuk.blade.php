@@ -51,7 +51,7 @@
                                     <td>{{ $item->nominal }}</td>
                                     <td>
                                         <a href="{{ url('edit-kasmasuk',$item->id) }}"><i class="fas fa-edit"></i></a> |
-                                         <a href="{{ url('delete-kasmasuk',$item->id) }}"><i class="fas fa-trash-alt" style="color:red"></i></a>
+                                         <a href="{{ url('delete-kasmasuk',$item->id) }}"onclick="return confirm('Hapus Data?')"><i class="fas fa-trash-alt" style="color:red"></i></a>
                                     </td>
                                 </tr>
                                 @endforeach
