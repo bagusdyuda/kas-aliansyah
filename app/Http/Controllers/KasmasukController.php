@@ -12,7 +12,7 @@ class KasmasukController extends Controller
      */
     public function index()
     {
-        $kasmasuk = Kasmasuk::paginate(5);
+        $kasmasuk = Kasmasuk::all();
         return view('kasmasuk.data-kasmasuk',compact('kasmasuk'));
     }
 
@@ -47,7 +47,8 @@ class KasmasukController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $kasmasuk = Kasmasuk::find($id);
+        return view('kasmasuk.show-kasmasuk', compact('kasmasuk'));
     }
 
     /**

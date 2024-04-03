@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\KasmasukController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -36,7 +37,18 @@ Route::middleware('auth')->group(function () {
     Route::get('/data-kasmasuk', [\App\Http\Controllers\KasmasukController::class, 'index'])->name('data-kasmasuk');
     Route::get('/create-kasmasuk', [\App\Http\Controllers\KasmasukController::class, 'create'])->name('create-kasmasuk');
     Route::post('/simpan-kasmasuk', [\App\Http\Controllers\KasmasukController::class, 'store'])->name('simpan-kasmasuk');
+    Route::get('/show-kasmasuk/{id}', [\App\Http\Controllers\KasmasukController::class, 'show'])->name('show-kasmasuk');
     Route::get('/edit-kasmasuk/{id}', [\App\Http\Controllers\KasmasukController::class, 'edit'])->name('edit-kasmasuk');
     Route::post('/update-kasmasuk/{id}', [\App\Http\Controllers\KasmasukController::class, 'update'])->name('update-kasmasuk');
     Route::get('/delete-kasmasuk/{id}', [\App\Http\Controllers\KasmasukController::class, 'destroy'])->name('delete-kasmasuk');
+
+    //setoran kas
+    Route::get('/data-setorkas', [\App\Http\Controllers\SetorankasController::class, 'index'])->name('data-setorkas');
+    Route::get('/create-setorkas', [\App\Http\Controllers\SetorankasController::class, 'create'])->name('create-setorkas');
+    Route::post('/simpan-setorkas', [\App\Http\Controllers\SetorankasController::class, 'store'])->name('simpan-setorkas');
+    Route::get('/show-setorkas/{id}', [\App\Http\Controllers\SetorankasController::class, 'show'])->name('show-setorkas');
+    Route::get('/edit-setorkas/{id}', [\App\Http\Controllers\SetorankasController::class, 'edit'])->name('edit-setorkas');
+    Route::post('/update-setorkas/{id}', [\App\Http\Controllers\SetorankasController::class, 'update'])->name('update-setorkas');
+    Route::get('/delete-setorkas/{id}', [\App\Http\Controllers\SetorankasController::class, 'destroy'])->name('delete-setorkas');
+
 });

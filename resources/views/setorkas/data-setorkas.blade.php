@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">{{ __('Kas Masuk') }}</h1>
+                    <h1 class="m-0">{{ __('Setoran Kas') }}</h1>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -22,7 +22,7 @@
                         <div class="card-body">
                             <div class="card-header">
                                 <div class="card-tools">
-                                    <a href="{{ route('create-kasmasuk') }}" class="btn btn-success">Tambah Data <i class="fas fa-plus-square"></i></a>
+                                    <a href="{{ route('create-setorkas') }}" class="btn btn-success">Tambah Data <i class="fas fa-plus-square"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -30,29 +30,31 @@
                             <table class="table table-bordered data-table">
                                 <tr>
                                     <th>#</th>
-                                    <th>Tanggal</th>
+                                    <th>Unit</th>
+                                    <th>Tanggal Setoran</th>
                                     <th>Nota</th>
-                                    <th>Penyerah</th>
-                                    <th>Id User</th>
-                                    <th>Dari Kas</th>
-                                    <th>Plot</th>
+                                    <th>Letak Setoran</th>
+                                    <th>Pengirim</th>
+                                    <th>Keperluan</th>
+                                    <th>Keterangan</th>
                                     <th>Nominal</th>
                                     <th>Aksi</th>
                                 </tr>
-                                @foreach ($kasmasuk as $item)
+                                @foreach ($setorankas as $item)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $item->tanggal }}</td>
+                                    <td>{{ $item->unit }}</td>
+                                    <td>{{ $item->tgl_setoran }}</td>
                                     <td>{{ $item->nota }}</td>
-                                    <td>{{ $item->penyerah }}</td>
-                                    <td>{{ $item->id_user }}</td>
-                                    <td>{{ $item->dari_kas }}</td>
-                                    <td>{{ $item->plot }}</td>
+                                    <td>{{ $item->letak_setoran }}</td>
+                                    <td>{{ $item->pengirim }}</td>
+                                    <td>{{ $item->keperluan }}</td>
+                                    <td>{{ $item->keterangan }}</td>
                                     <td>{{ $item->nominal }}</td>
                                     <td>
-                                        <a href="{{ url('edit-kasmasuk',$item->id) }}"><i class="fas fa-edit" style="color:blue"></i></a> |
-                                        <a href="{{ url('show-kasmasuk',$item->id) }}"><i class="fas fa-solid fa-eye" style="color:green"></i></a> |
-                                         <a href="{{ url('delete-kasmasuk',$item->id) }}"onclick="return confirm('Hapus Data?')"><i class="fas fa-trash-alt" style="color:red"></i></a>
+                                        <a href="{{ url('edit-setorkas',$item->id) }}"><i class="fas fa-edit" style="color:blue"></i></a> |
+                                        <a href="{{ url('show-setorkas',$item->id) }}"><i class="fas fa-solid fa-eye" style="color:green"></i></a> |
+                                         <a href="{{ url('delete-setorkas',$item->id) }}"onclick="return confirm('Hapus Data?')"><i class="fas fa-trash-alt" style="color:red"></i></a>
                                     </td>
                                 </tr>
                                 @endforeach
