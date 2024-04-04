@@ -58,7 +58,7 @@
                                             <input type="number" name="nominal" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $setorankas->nominal }}">
                                         </div>
                                         <div class="form-group d-flex justify-content-end">
-                                            <button type="submit" class="btn btn-primary">Ubah Data</button>
+                                            <button type="submit" class="btn btn-success">Ubah Data</button>
                                         </div>
                                     </form>
                                 </div>

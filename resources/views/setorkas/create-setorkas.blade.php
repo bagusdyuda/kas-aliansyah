@@ -57,7 +57,7 @@
                                             <label for="exampleInputEmail1" class="form-label">Nominal</label>
                                             <input type="number" name="nominal" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group d-flex justify-content-end">
                                             <button type="submit" class="btn btn-success">Simpan Data</button>
                                         </div>
                                     </form>
