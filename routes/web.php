@@ -42,15 +42,6 @@ Route::middleware('auth')->group(function () {
     Route::post('/update-kasmasuk/{id}', [\App\Http\Controllers\KasmasukController::class, 'update'])->name('update-kasmasuk');
     Route::get('/delete-kasmasuk/{id}', [\App\Http\Controllers\KasmasukController::class, 'destroy'])->name('delete-kasmasuk');
 
-    Route::get('/data-pindahplot', [\App\Http\Controllers\PindahplotController::class, 'index'])->name('data-pindahplot');
-    Route::get('/create-pindahplot', [\App\Http\Controllers\PindahplotController::class, 'create'])->name('create-pindahplot');
-    Route::post('/simpan-pindahplot', [\App\Http\Controllers\PindahplotController::class, 'store'])->name('simpan-pindahplot');
-    Route::get('/show-pindahplot/{id}', [\App\Http\Controllers\PindahplotController::class, 'show'])->name('show-pindahplot');
-    Route::get('/edit-pindahplot/{id}', [\App\Http\Controllers\PindahplotController::class, 'edit'])->name('edit-pindahplot');
-    Route::post('/update-pindahplot/{id}', [\App\Http\Controllers\PindahplotController::class, 'update'])->name('update-pindahplot');
-    Route::get('/delete-pindahplot/{id}', [\App\Http\Controllers\PindahplotController::class, 'destroy'])->name('delete-pindahplot');
-
-
     //kas sales
     Route::get('/data-setorkas', [\App\Http\Controllers\SetorankasController::class, 'index'])->name('data-setorkas');
     Route::get('/create-setorkas', [\App\Http\Controllers\SetorankasController::class, 'create'])->name('create-setorkas');

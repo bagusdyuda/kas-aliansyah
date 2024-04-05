@@ -56,7 +56,7 @@
                                         <input type="number" name="nominal" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $debitmasuk->nominal }}">
                                     </div>
                                     <div class="form-group d-flex justify-content-end">
-                                        <a href="/data-kasmasuk " class="btn btn-primary">Kembali</a>
+                                        <a href="/data-debitmasuk " class="btn btn-primary">Kembali</a>
                                     </div>
                                 </form>
                             </div>

@@ -56,22 +56,6 @@
                 </ul>
                 <ul class="nav nav-treeview" style="display: none;">
                     <li class="nav-item">
-                        <a href="{{ route('data-pindahplot') }}" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
-                            <p>Pindah Plot</p>
-                        </a>
-                    </li>
-                </ul>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-circle nav-icon"></i>
-                        <p>
-                            Kas Sales
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
-                    </a>
-                <ul class="nav nav-treeview" style="display: none;">
-                    <li class="nav-item">
                         <a href="{{ route('data-setorkas') }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Setoran Kas</p>
