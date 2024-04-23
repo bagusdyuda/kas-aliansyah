@@ -37,7 +37,9 @@
                                     <th>Pengirim</th>
                                     <th>Keperluan</th>
                                     <th>Keterangan</th>
+                                    <th>Kategori</th>
                                     <th>Nominal</th>
+                                    <th>Rek Bank</th>
                                     <th>Aksi</th>
                                 </tr>
                                 @foreach ($setorankas as $item)
@@ -50,7 +52,9 @@
                                     <td>{{ $item->pengirim }}</td>
                                     <td>{{ $item->keperluan }}</td>
                                     <td>{{ $item->keterangan }}</td>
+                                    <td>{{ $item->kategori }}</td>
                                     <td>{{ $item->nominal }}</td>
+                                    <td>{{ $item->rek_bank }}</td>
                                     <td>
                                         <a href="{{ url('edit-setorkas',$item->id) }}"><i class="fas fa-edit" style="color:blue"></i></a> |
                                         <a href="{{ url('show-setorkas',$item->id) }}"><i class="fas fa-solid fa-eye" style="color:green"></i></a> |
@@ -66,7 +70,6 @@
             <!-- /.row -->
         </div><!-- /.container-fluid -->
     </div>
-    @include('sweetalert::alert')
     <!-- /.content -->
 @endsection
 

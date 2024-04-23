@@ -64,7 +64,6 @@
             <!-- /.row -->
         </div><!-- /.container-fluid -->
     </div>
-    @include('sweetalert::alert')
     <!-- /.content -->
 @endsection
 

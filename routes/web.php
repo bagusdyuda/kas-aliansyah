@@ -59,4 +59,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/edit-debitmasuk/{id}', [\App\Http\Controllers\DebitmasukController::class, 'edit'])->name('edit-debitmasuk');
     Route::post('/update-debitmasuk/{id}', [\App\Http\Controllers\DebitmasukController::class, 'update'])->name('update-debitmasuk');
     Route::get('/delete-debitmasuk/{id}', [\App\Http\Controllers\DebitmasukController::class, 'destroy'])->name('delete-debitmasuk');
+
+    //kas kantor
+    Route::get('/data-kaskantor', [\App\Http\Controllers\KaskantorController::class, 'index'])->name('data-kaskantor');
+    Route::get('/create-kaskantor', [\App\Http\Controllers\KaskantorController::class, 'create'])->name('create-kaskantor');
+    Route::post('/simpan-kaskantor', [\App\Http\Controllers\KaskantorController::class, 'store'])->name('simpan-kaskantor');
+
 });

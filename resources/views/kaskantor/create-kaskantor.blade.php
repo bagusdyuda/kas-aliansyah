@@ -1,18 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-  <style>
-    #custom{
-      visibility:hidden;
-      display: block;
-    }
-  </style>
     <!-- Content Header (Page header) -->
     <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">{{ __('Setoran Kas') }}</h1>
+                    <h1 class="m-0">{{ __('Kas Kantor') }}</h1>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -29,15 +23,11 @@
                             <div class="card-header">
                                 <h3>Tambah Data</h3>
                                 <div class="card-body">
-                                    <form action="{{ route('simpan-setorkas') }}" method="POST">
+                                    <form action="{{ route('simpan-kaskantor') }}" method="POST">
                                         @csrf
                                         <div class="form-group">
-                                            <label for="exampleInputEmail1" class="form-label">Unit</label>
-                                            <input type="text" name="unit" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1" class="form-label">Tanggal Setoran</label>
-                                            <input type="text" name="tgl_setoran" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                            <label for="exampleInputEmail1" class="form-label">Tanggal Masuk</label>
+                                            <input type="text" name="tanggal_masuk" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1" class="form-label">Nota</label>
@@ -48,8 +38,16 @@
                                             <input type="text" name="letak_setoran" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                         </div>
                                         <div class="form-group">
+                                            <label for="exampleInputEmail1" class="form-label">Plot</label>
+                                            <input type="text" name="plot" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="form-group">
                                             <label for="exampleInputEmail1" class="form-label">Pengirim</label>
                                             <input type="text" name="pengirim" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1" class="form-label">Penerima</label>
+                                            <input type="text" name="penerima" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1" class="form-label">Keperluan</label>
@@ -59,21 +57,9 @@
                                             <label for="exampleInputEmail1" class="form-label">Keterangan</label>
                                             <input type="text" name="keterangan" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                         </div>
-                                        <label class="control-label">Jenis Pembayaran</label>
-                                        <div>
-                                            <select class="form-select" name="kategori" aria-label="Default select example">
-                                                <option selected>Kategori</option>
-                                                <option value="Tunai">Tunai</option>
-                                                <option value="Bank">Bank</option>
-                                            </select>
-                                        </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1" class="form-label">Nominal</label>
-                                            <input type="text" name="nominal" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1" class="form-label">Rekening Bank</label>
-                                            <input type="text" name="rek_bank" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                            <input type="number" name="nominal" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                         </div>
                                         <div class="form-group d-flex justify-content-end">
                                             <button type="submit" class="btn btn-success">Simpan Data</button>

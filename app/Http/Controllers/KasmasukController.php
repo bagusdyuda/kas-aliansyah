@@ -39,7 +39,7 @@ class KasmasukController extends Controller
         'nominal' => $request->nominal,
         ]);
 
-        return redirect('data-kasmasuk')->with('toast_success', 'Data Berhasil Disimpan');
+        return redirect('data-kasmasuk');
     }
 
     /**
@@ -68,7 +68,7 @@ class KasmasukController extends Controller
         $kasmasuk = Kasmasuk::findorfail($id);
         $kasmasuk->update($request->all());
 
-        return redirect('data-kasmasuk')->with('toast_success', 'Data Berhasil Diubah');
+        return redirect('data-kasmasuk');
     }
 
     /**
@@ -78,6 +78,7 @@ class KasmasukController extends Controller
     {
         $kasmasuk = Kasmasuk::findorfail($id);
         $kasmasuk->delete();
-        return back()->with('info', 'Data Berhasil Dihapus');
+
+        return redirect('data-kasmasuk');
     }
 }

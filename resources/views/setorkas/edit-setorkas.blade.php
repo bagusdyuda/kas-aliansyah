@@ -53,9 +53,20 @@
                                             <label for="exampleInputEmail1" class="form-label">Keterangan</label>
                                             <input type="text" name="keterangan" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $setorankas->keterangan }}">
                                         </div>
+                                        <label class="control-label">Jenis Pembayaran</label>
+                                        <div>
+                                            <select class="form-select" name="kategori" aria-label="Default select example">
+                                                <option value="Tunai" @if ($setorankas->kategori == "Tunai") selected @endif>Tunai</option>
+                                                <option value="Bank" @if ($setorankas->kategori == "Bank") selected @endif>Bank</option>
+                                            </select>
+                                        </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1" class="form-label">Nominal</label>
                                             <input type="number" name="nominal" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $setorankas->nominal }}">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1" class="form-label">Rekening Bank</label>
+                                            <input type="text" name="rek_bank" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $setorankas->rek_bank }}">
                                         </div>
                                         <div class="form-group d-flex justify-content-end">
                                             <button type="submit" class="btn btn-success">Ubah Data</button>

@@ -5,20 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Setorankas extends Model
+class Kaskantor extends Model
 {
     use HasFactory;
 
+    protected $table = 'kaskantor';
     protected $fillable = [
-        'unit',
-        'tgl_setoran',
+        'tanggal_masuk',
         'nota',
         'letak_setoran',
+        'plot',
         'pengirim',
+        'penerima',
         'keperluan',
         'keterangan',
-        'kategori',
-        'nominal',
-        'rek_bank'
+        'nominal'
     ];
 }

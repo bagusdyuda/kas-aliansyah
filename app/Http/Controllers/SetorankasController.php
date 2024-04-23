@@ -37,10 +37,12 @@ class SetorankasController extends Controller
         $setorankas->pengirim = $request->pengirim;
         $setorankas->keperluan = $request->keperluan;
         $setorankas->keterangan = $request->keterangan;
+        $setorankas->kategori = $request->kategori;
         $setorankas->nominal = $request->nominal;
+        $setorankas->rek_bank = $request->rek_bank;
         $setorankas->save();
 
-        return redirect()->route('data-setorkas')->with('toast_success', 'Data Berhasil Disimpan');
+        return redirect()->route('data-setorkas');
     }
 
     /**
@@ -74,10 +76,12 @@ class SetorankasController extends Controller
         $setorankas->pengirim = $request->pengirim;
         $setorankas->keperluan = $request->keperluan;
         $setorankas->keterangan = $request->keterangan;
+        $setorankas->kategori = $request->kategori;
         $setorankas->nominal = $request->nominal;
+        $setorankas->rek_bank = $request->rek_bank;
         $setorankas->save();
 
-        return redirect()->route('data-setorkas')->with('toast_success', 'Data Berhasil Diubah');
+        return redirect()->route('data-setorkas');
     }
 
     /**
@@ -88,6 +92,6 @@ class SetorankasController extends Controller
         $setorankas = Setorankas::find($id);
         $setorankas->delete();
 
-        return redirect('data-setorkas')->with('info', 'Data Berhasil Dihapus');
+        return redirect('data-setorkas');
     }
 }

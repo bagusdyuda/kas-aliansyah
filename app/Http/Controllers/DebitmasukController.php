@@ -40,7 +40,7 @@ class DebitmasukController extends Controller
         $debitmasuk->nominal = $request->nominal;
         $debitmasuk->save();
 
-        return redirect()->route('data-debitmasuk')->with('toast_success', 'Data Berhasil Disimpan');
+        return redirect()->route('data-debitmasuk');
     }
 
     /**
@@ -77,7 +77,7 @@ class DebitmasukController extends Controller
         $debitmasuk->nominal = $request->nominal;
         $debitmasuk->save();
 
-        return redirect()->route('data-debitmasuk')->with('toast_success', 'Data Berhasil Diubah');
+        return redirect()->route('data-debitmasuk');
     }
 
     /**
@@ -88,6 +88,6 @@ class DebitmasukController extends Controller
         $debitmasuk = Debitmasuk::find($id);
         $debitmasuk->delete();
 
-        return redirect('data-debitmasuk')->with('info', 'Data Berhasil Dihapus');
+        return redirect('data-debitmasuk');
     }
 }
