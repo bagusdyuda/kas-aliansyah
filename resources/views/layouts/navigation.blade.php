@@ -79,6 +79,48 @@
                     </li>
                 </ul>
             </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-circle nav-icon"></i>
+                    <p>
+                        Kas Sales
+                        <i class="fas fa-angle-left right"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview" style="display: none;">
+                    <li class="nav-item">
+                        <a href="{{ route('data-setorkas') }}" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Uang Masuk</p>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav nav-treeview" style="display: none;">
+                    <li class="nav-item">
+                        <a href="{{ route('data-setorkas') }}" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Setoran Kas</p>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav nav-treeview" style="display: none;">
+                    <li class="nav-item">
+                        <a href="{{ route('data-debitmasuk') }}" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Debit Masuk</p>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav nav-treeview" style="display: none;">
+                    <li class="nav-item">
+                        <a href="{{ route('data-kaskantor') }}" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Kas Kantor</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </nav>
     <!-- /.sidebar-menu -->
