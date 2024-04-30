@@ -66,3 +66,5 @@ Route::middleware('auth')->group(function () {
     Route::post('/simpan-kaskantor', [\App\Http\Controllers\KaskantorController::class, 'store'])->name('simpan-kaskantor');
 
 });
+
+//
