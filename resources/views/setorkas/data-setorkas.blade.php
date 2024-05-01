@@ -32,29 +32,19 @@
                                     <th>#</th>
                                     <th>Unit</th>
                                     <th>Tanggal Setoran</th>
-                                    <th>Nota</th>
-                                    <th>Letak Setoran</th>
-                                    <th>Pengirim</th>
+                                    <th>Penerima</th>
                                     <th>Keperluan</th>
-                                    <th>Keterangan</th>
-                                    <th>Kategori</th>
-                                    <th>Nominal</th>
-                                    <th>Rek Bank</th>
+                                    <th>Nominal Setoran</th>
                                     <th>Aksi</th>
                                 </tr>
                                 @foreach ($setorankas as $item)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $item->unit }}</td>
-                                    <td>{{ $item->tgl_setoran }}</td>
-                                    <td>{{ $item->nota }}</td>
-                                    <td>{{ $item->letak_setoran }}</td>
-                                    <td>{{ $item->pengirim }}</td>
+                                    <td>{{ $item->tanggal_setoran }}</td>
+                                    <td>{{ $item->penerima }}</td>
                                     <td>{{ $item->keperluan }}</td>
-                                    <td>{{ $item->keterangan }}</td>
-                                    <td>{{ $item->kategori }}</td>
                                     <td>{{ $item->nominal }}</td>
-                                    <td>{{ $item->rek_bank }}</td>
                                     <td>
                                         <a href="{{ url('edit-setorkas',$item->id) }}"><i class="fas fa-edit" style="color:blue"></i></a> |
                                         <a href="{{ url('show-setorkas',$item->id) }}"><i class="fas fa-solid fa-eye" style="color:green"></i></a> |

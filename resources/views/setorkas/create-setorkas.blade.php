@@ -31,49 +31,39 @@
                                 <div class="card-body">
                                     <form action="{{ route('simpan-setorkas') }}" method="POST">
                                         @csrf
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1" class="form-label">Unit</label>
-                                            <input type="text" name="unit" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1" class="form-label">Tanggal Setoran</label>
-                                            <input type="text" name="tgl_setoran" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1" class="form-label">Nota</label>
-                                            <input type="text" name="nota" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1" class="form-label">Letak Setoran</label>
-                                            <input type="text" name="letak_setoran" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1" class="form-label">Pengirim</label>
-                                            <input type="text" name="pengirim" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1" class="form-label">Keperluan</label>
-                                            <input type="text" name="keperluan" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1" class="form-label">Keterangan</label>
-                                            <input type="text" name="keterangan" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                        </div>
-                                        <label class="control-label">Jenis Pembayaran</label>
+                                        <label class="control-label">Unit</label>
                                         <div>
-                                            <select class="form-select" name="kategori" aria-label="Default select example">
-                                                <option selected>Kategori</option>
-                                                <option value="Tunai">Tunai</option>
-                                                <option value="Bank">Bank</option>
+                                            <select class="form-select" name="unit" aria-label="Default select example">
+                                                <option value=""> </option>
+                                                <option value="MAD SHOLIKIN">MAD SHOLIKIN</option>
+                                                <option value="EDI PURNOMO">EDI PURNOMO</option>
+                                                <option value="ENDIK">ENDIK</option>
                                             </select>
                                         </div>
+                                        <br>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1" class="form-label">Tanggal Setoran</label>
+                                            <input type="text" name="tanggal_setoran" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                        <label class="control-label">Penerima</label>
+                                        <div>
+                                            <select class="form-select" name="penerima" aria-label="Default select example">
+                                                <option value=""> </option>
+                                                <option value="ATOK NOVIANTO">ATOK NOVIANTO</option>
+                                            </select>
+                                        </div>
+                                        <br>
+                                        <label class="control-label">Keperluan</label>
+                                        <div>
+                                            <select class="form-select" name="keperluan" aria-label="Default select example">
+                                                <option value=""> </option>
+                                                <option value="SETORAN KAS TUNAI">SETORAN KAS TUNAI</option>
+                                            </select>
+                                        </div>
+                                        <br>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1" class="form-label">Nominal</label>
-                                            <input type="text" name="nominal" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1" class="form-label">Rekening Bank</label>
-                                            <input type="text" name="rek_bank" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                            <input type="number" name="nominal" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                         </div>
                                         <div class="form-group d-flex justify-content-end">
                                             <button type="submit" class="btn btn-success">Simpan Data</button>

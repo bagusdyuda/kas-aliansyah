@@ -9,16 +9,12 @@ class Setorankas extends Model
 {
     use HasFactory;
 
+    protected $table = 'sales_setorans';
     protected $fillable = [
         'unit',
-        'tgl_setoran',
-        'nota',
-        'letak_setoran',
-        'pengirim',
+        'tanggal_setoran',
+        'penerima',
         'keperluan',
-        'keterangan',
-        'kategori',
-        'nominal',
-        'rek_bank'
+        'nominal'
     ];
 }

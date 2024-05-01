@@ -31,15 +31,10 @@ class SetorankasController extends Controller
     {
         $setorankas = new Setorankas();
         $setorankas->unit = $request->unit;
-        $setorankas->tgl_setoran = $request->tgl_setoran;
-        $setorankas->nota = $request->nota;
-        $setorankas->letak_setoran = $request->letak_setoran;
-        $setorankas->pengirim = $request->pengirim;
+        $setorankas->tanggal_setoran = $request->tanggal_setoran;
+        $setorankas->penerima = $request->penerima;
         $setorankas->keperluan = $request->keperluan;
-        $setorankas->keterangan = $request->keterangan;
-        $setorankas->kategori = $request->kategori;
         $setorankas->nominal = $request->nominal;
-        $setorankas->rek_bank = $request->rek_bank;
         $setorankas->save();
 
         return redirect()->route('data-setorkas');
@@ -70,15 +65,10 @@ class SetorankasController extends Controller
     {
         $setorankas = Setorankas::find($id);
         $setorankas->unit = $request->unit;
-        $setorankas->tgl_setoran = $request->tgl_setoran;
-        $setorankas->nota = $request->nota;
-        $setorankas->letak_setoran = $request->letak_setoran;
-        $setorankas->pengirim = $request->pengirim;
+        $setorankas->tanggal_setoran = $request->tanggal_setoran;
+        $setorankas->penerima = $request->penerima;
         $setorankas->keperluan = $request->keperluan;
-        $setorankas->keterangan = $request->keterangan;
-        $setorankas->kategori = $request->kategori;
         $setorankas->nominal = $request->nominal;
-        $setorankas->rek_bank = $request->rek_bank;
         $setorankas->save();
 
         return redirect()->route('data-setorkas');

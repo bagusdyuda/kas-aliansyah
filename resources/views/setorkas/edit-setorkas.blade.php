@@ -25,48 +25,36 @@
                                 <div class="card-body">
                                     <form action="{{ url('update-setorkas',$setorankas->id) }}" method="POST">
                                         @csrf
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1" class="form-label">Unit</label>
-                                            <input type="text" name="unit" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $setorankas->unit }}">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1" class="form-label">Tanggal Setoran</label>
-                                            <input type="text" name="tgl_setoran" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $setorankas->tgl_setoran }}">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1" class="form-label">Nota</label>
-                                            <input type="text" name="nota" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $setorankas->nota }}">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1" class="form-label">Letak Setoran</label>
-                                            <input type="text" name="letak_setoran" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $setorankas->letak_setoran }}">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1" class="form-label">Pengirim</label>
-                                            <input type="text" name="pengirim" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $setorankas->pengirim }}">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1" class="form-label">Keperluan</label>
-                                            <input type="text" name="keperluan" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $setorankas->keperluan }}">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1" class="form-label">Keterangan</label>
-                                            <input type="text" name="keterangan" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $setorankas->keterangan }}">
-                                        </div>
-                                        <label class="control-label">Jenis Pembayaran</label>
+                                        <label class="control-label">Unit</label>
                                         <div>
-                                            <select class="form-select" name="kategori" aria-label="Default select example">
-                                                <option value="Tunai" @if ($setorankas->kategori == "Tunai") selected @endif>Tunai</option>
-                                                <option value="Bank" @if ($setorankas->kategori == "Bank") selected @endif>Bank</option>
+                                            <select class="form-select" name="unit" aria-label="Default select example">
+                                                <option value="MAD SHOLIKIN" @if ($setorankas->unit == "MAD SHOLIKIN") selected @endif>MAD SHOLIKIN</option>
+                                                <option value="EDI PURNOMO" @if ($setorankas->unit == "EDI PURNOMO") selected @endif>EDI PURNOMO</option>
+                                                <option value="ENDIK" @if ($setorankas->unit == "ENDIK") selected @endif>ENDIK</option>
                                             </select>
                                         </div>
+                                        <br>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1" class="form-label">Tanggal Setoran</label>
+                                            <input type="text" name="tanggal_setoran" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $setorankas->tanggal_setoran }}">
+                                        </div>
+                                        <label class="control-label">Penerima</label>
+                                        <div>
+                                            <select class="form-select" name="penerima" aria-label="Default select example">
+                                                <option value="ATOK NOVIANTO" @if ($setorankas->penerima == "ATOK NOVIANTO") selected @endif>ATOK NOVIANTO</option>
+                                            </select>
+                                        </div>
+                                        <br>
+                                        <label class="control-label">Keperluan</label>
+                                        <div>
+                                            <select class="form-select" name="keperluan" aria-label="Default select example">
+                                                <option value="SETORAN KAS TUNAI" @if ($setorankas->keperluan == "SETORAN KAS TUNAI") selected @endif>SETORAN KAS TUNAI</option>
+                                            </select>
+                                        </div>
+                                        <br>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1" class="form-label">Nominal</label>
                                             <input type="number" name="nominal" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $setorankas->nominal }}">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1" class="form-label">Rekening Bank</label>
-                                            <input type="text" name="rek_bank" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $setorankas->rek_bank }}">
                                         </div>
                                         <div class="form-group d-flex justify-content-end">
                                             <button type="submit" class="btn btn-success">Ubah Data</button>
