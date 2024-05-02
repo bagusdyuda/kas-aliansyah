@@ -51,6 +51,15 @@ Route::middleware('auth')->group(function () {
     Route::post('/update-setorkas/{id}', [\App\Http\Controllers\SetorankasController::class, 'update'])->name('update-setorkas');
     Route::get('/delete-setorkas/{id}', [\App\Http\Controllers\SetorankasController::class, 'destroy'])->name('delete-setorkas');
 
+    //pindah kas
+    Route::get('/data-pindahkas', [\App\Http\Controllers\PindahkasController::class, 'index'])->name('data-pindahkas');
+    Route::get('/create-pindahkas', [\App\Http\Controllers\PindahkasController::class, 'create'])->name('create-pindahkas');
+    Route::post('/simpan-pindahkas', [\App\Http\Controllers\PindahkasController::class, 'store'])->name('simpan-pindahkas');
+    Route::get('/show-pindahkas/{id}', [\App\Http\Controllers\PindahkasController::class, 'show'])->name('show-pindahkas');
+    Route::get('/edit-pindahkas/{id}', [\App\Http\Controllers\PindahkasController::class, 'edit'])->name('edit-pindahkas');
+    Route::post('/update-pindahkas/{id}', [\App\Http\Controllers\PindahkasController::class, 'update'])->name('update-pindahkas');
+    Route::get('/delete-pindahkas/{id}', [\App\Http\Controllers\PindahkasController::class, 'destroy'])->name('delete-pindahkas');
+
     //debit bank
     Route::get('/data-debitmasuk', [\App\Http\Controllers\DebitmasukController::class, 'index'])->name('data-debitmasuk');
     Route::get('/create-debitmasuk', [\App\Http\Controllers\DebitmasukController::class, 'create'])->name('create-debitmasuk');

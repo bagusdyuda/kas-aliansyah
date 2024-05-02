@@ -106,6 +106,14 @@
                 </ul>
                 <ul class="nav nav-treeview" style="display: none;">
                     <li class="nav-item">
+                        <a href="{{ route('data-pindahkas') }}" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Pindah Kas</p>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav nav-treeview" style="display: none;">
+                    <li class="nav-item">
                         <a href="{{ route('data-debitmasuk') }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Debit Masuk</p>
