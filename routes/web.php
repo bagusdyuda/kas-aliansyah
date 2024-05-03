@@ -60,6 +60,15 @@ Route::middleware('auth')->group(function () {
     Route::post('/update-pindahkas/{id}', [\App\Http\Controllers\PindahkasController::class, 'update'])->name('update-pindahkas');
     Route::get('/delete-pindahkas/{id}', [\App\Http\Controllers\PindahkasController::class, 'destroy'])->name('delete-pindahkas');
 
+    //setoran pindah transfer sales
+    Route::get('/data-setoranpindahtransfersales', [\App\Http\Controllers\SetoranpindahtransfersalesController::class, 'index'])->name('data-setoranpindahtransfersales');
+    Route::get('/create-setoranpindahtransfersales', [\App\Http\Controllers\SetoranpindahtransfersalesController::class, 'create'])->name('create-setoranpindahtransfersales');
+    Route::post('/simpan-setoranpindahtransfersales', [\App\Http\Controllers\SetoranpindahtransfersalesController::class, 'store'])->name('simpan-setoranpindahtransfersales');
+    Route::get('/show-setoranpindahtransfersales/{id}', [\App\Http\Controllers\SetoranpindahtransfersalesController::class, 'show'])->name('show-setoranpindahtransfersales');
+    Route::get('/edit-setoranpindahtransfersales/{id}', [\App\Http\Controllers\SetoranpindahtransfersalesController::class, 'edit'])->name('edit-setoranpindahtransfersales');
+    Route::post('/update-setoranpindahtransfersales/{id}', [\App\Http\Controllers\SetoranpindahtransfersalesController::class, 'update'])->name('update-setoranpindahtransfersales');
+    Route::get('/delete-setoranpindahtransfersales/{id}', [\App\Http\Controllers\SetoranpindahtransfersalesController::class, 'destroy'])->name('delete-setoranpindahtransfersales');
+
     //debit bank
     Route::get('/data-debitmasuk', [\App\Http\Controllers\DebitmasukController::class, 'index'])->name('data-debitmasuk');
     Route::get('/create-debitmasuk', [\App\Http\Controllers\DebitmasukController::class, 'create'])->name('create-debitmasuk');

@@ -60,7 +60,7 @@
                                         <input type="number" name="nominal" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $pindahkas->nominal }}" readonly>
                                     </div>
                                     <div class="form-group d-flex justify-content-end">
-                                        <a href="/data-setorkas" class="btn btn-primary">Kembali</a>
+                                        <a href="/data-pindahkas" class="btn btn-primary">Kembali</a>
                                     </div>
                                 </form>
                             </div>
