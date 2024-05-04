@@ -1,18 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-  <style>
-    #custom{
-      visibility:hidden;
-      display: block;
-    }
-  </style>
+
     <!-- Content Header (Page header) -->
     <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">{{ __('Setoran Kas') }}</h1>
+                    <h1 class="m-0">{{ __('Rincian Nota Sales') }}</h1>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -29,11 +24,15 @@
                             <div class="card-header">
                                 <h3>Tambah Data</h3>
                                 <div class="card-body">
-                                    <form action="{{ route('simpan-setorkas') }}" method="POST">
+                                    <form action="{{ route('simpan-rinciannotasales') }}" method="POST">
                                         @csrf
-                                        <label class="control-label">Unit</label>
-                                        <div>
-                                            <select class="custom-select form-control-border" name="unit" aria-label="Default select example">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1" class="form-label">ID Unit</label>
+                                            <input type="number" name="id_unit" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                        <label class="control-label">Nama Unit</label>
+                                        <div class="select-container">
+                                            <select class="custom-select form-control-border" name="nama_unit">
                                                 <option value="">Pilih Unit</option>
                                                 <option value="MAD SHOLIKIN">MAD SHOLIKIN</option>
                                                 <option value="EDI PURNOMO">EDI PURNOMO</option>
@@ -42,22 +41,16 @@
                                         </div>
                                         <br>
                                         <div class="form-group">
-                                            <label for="exampleInputEmail1" class="form-label">Tanggal Setoran</label>
-                                            <input type="text" name="tanggal_setoran" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                            <label for="exampleInputEmail1" class="form-label">Tanggal Setor</label>
+                                            <input type="text" name="tanggal_setor" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                         </div>
-                                        <label class="control-label">Penerima</label>
+                                        <label class="control-label">Nama Customer</label>
                                         <div>
-                                            <select class="custom-select form-control-border" name="penerima" aria-label="Default select example">
-                                                <option value="">Pilih Penerima </option>
-                                                <option value="ATOK NOVIANTO">ATOK NOVIANTO</option>
-                                            </select>
-                                        </div>
-                                        <br>
-                                        <label class="control-label">Keperluan</label>
-                                        <div>
-                                            <select class="custom-select form-control-border" name="keperluan" aria-label="Default select example">
-                                                <option value="">Pilih Keperluan</option>
-                                                <option value="SETORAN KAS TUNAI">SETORAN KAS TUNAI</option>
+                                            <select class="custom-select form-control-border" name="nama_customer">
+                                                <option value="">Pilih Customer</option>
+                                                <option value="HUDA BOLO TANI MALO BOJONEGORO">HUDA BOLO TANI MALO BOJONEGORO</option>
+                                                <option value="DARMAJI AJI JAYA GROBOGAN">DARMAJI AJI JAyA GROBOGAN</option>
+                                                <option value="ADIB KURNIA TANI DEMAK">ADIB KURNIA TANI DEMAK</option>
                                             </select>
                                         </div>
                                         <br>

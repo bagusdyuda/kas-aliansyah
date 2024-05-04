@@ -25,7 +25,7 @@
                                 <div class="card-body">
                                     <label class="control-label">Unit</label>
                                         <div>
-                                            <select class="form-select" name="unit" aria-label="Default select example" disabled>
+                                            <select class="custom-select form-control-border" name="unit" aria-label="Default select example" disabled>
                                                 <option value="MAD SHOLIKIN" @if ($setorankas->unit == "MAD SHOLIKIN") selected @endif>MAD SHOLIKIN</option>
                                                 <option value="EDI PURNOMO" @if ($setorankas->unit == "EDI PURNOMO") selected @endif>EDI PURNOMO</option>
                                                 <option value="ENDIK" @if ($setorankas->unit == "ENDIK") selected @endif>ENDIK</option>
@@ -38,14 +38,14 @@
                                         </div>
                                         <label class="control-label">Penerima</label>
                                         <div>
-                                            <select class="form-select" name="penerima" aria-label="Default select example" disabled>
+                                            <select class="custom-select form-control-border" name="penerima" aria-label="Default select example" disabled>
                                                 <option value="ATOK NOVIANTO" @if ($setorankas->penerima == "ATOK NOVIANTO") selected @endif>ATOK NOVIANTO</option>
                                             </select>
                                         </div>
                                         <br>
                                         <label class="control-label">Keperluan</label>
                                         <div>
-                                            <select class="form-select" name="keperluan" aria-label="Default select example" disabled>
+                                            <select class="custom-select form-control-border" name="keperluan" aria-label="Default select example" disabled>
                                                 <option value="SWTORAN KAS TUNAI" @if ($setorankas->keperluan == "SETORAN KAS TUNAI") selected @endif>SETORAN KAS TUNAI</option>
                                             </select>
                                         </div>

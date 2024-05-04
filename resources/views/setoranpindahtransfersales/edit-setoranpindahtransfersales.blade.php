@@ -39,7 +39,7 @@
                                         </div>
                                         <label class="control-label">Bank</label>
                                         <div>
-                                            <select class="form-select" name="bank" aria-label="Default select example">
+                                            <select class="custom-select form-control-border" name="bank" aria-label="Default select example">
                                                 <option value="KAS BANK BRI - ALIANSYAH 0066.01.001585.302" @if ($setoranpindahtransfersales->bank == "KAS BANK BRI - ALIANSYAH 0066.01.001585.302") selected @endif>KAS BANK BRI - ALIANSYAH 0066.01.001585.302</option>
                                             </select>
                                         </div>

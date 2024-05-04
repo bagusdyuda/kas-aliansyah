@@ -69,6 +69,15 @@ Route::middleware('auth')->group(function () {
     Route::post('/update-setoranpindahtransfersales/{id}', [\App\Http\Controllers\SetoranpindahtransfersalesController::class, 'update'])->name('update-setoranpindahtransfersales');
     Route::get('/delete-setoranpindahtransfersales/{id}', [\App\Http\Controllers\SetoranpindahtransfersalesController::class, 'destroy'])->name('delete-setoranpindahtransfersales');
 
+    //rincian nota sales
+    Route::get('/data-rinciannotasales', [\App\Http\Controllers\RincianNotaSalesController::class, 'index'])->name('data-rinciannotasales');
+    Route::get('/create-rinciannotasales', [\App\Http\Controllers\RincianNotaSalesController::class, 'create'])->name('create-rinciannotasales');
+    Route::post('/simpan-rinciannotasales', [\App\Http\Controllers\RincianNotaSalesController::class, 'store'])->name('simpan-rinciannotasales');
+    Route::get('/show-rinciannotasales/{id}', [\App\Http\Controllers\RincianNotaSalesController::class, 'show'])->name('show-rinciannotasales');
+    Route::get('/edit-rinciannotasales/{id}', [\App\Http\Controllers\RincianNotaSalesController::class, 'edit'])->name('edit-rinciannotasales');
+    Route::post('/update-rinciannotasales/{id}', [\App\Http\Controllers\RincianNotaSalesController::class, 'update'])->name('update-rinciannotasales');
+    Route::get('/delete-rinciannotasales/{id}', [\App\Http\Controllers\RincianNotaSalesController::class, 'destroy'])->name('delete-rinciannotasales');
+
     //debit bank
     Route::get('/data-debitmasuk', [\App\Http\Controllers\DebitmasukController::class, 'index'])->name('data-debitmasuk');
     Route::get('/create-debitmasuk', [\App\Http\Controllers\DebitmasukController::class, 'create'])->name('create-debitmasuk');

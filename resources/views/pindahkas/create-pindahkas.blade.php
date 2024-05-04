@@ -37,32 +37,32 @@
                                         </div>
                                         <label class="control-label">Yang Menyerahkan</label>
                                         <div>
-                                            <select class="form-select" name="yang_menyerahkan" aria-label="Default select example">
-                                                <option value=""> </option>
+                                            <select class="custom-select form-control-border" name="yang_menyerahkan" aria-label="Default select example">
+                                                <option value="">Pilih Penyerah</option>
                                                 <option value="ATOK NOVIANTO">ATOK NOVIANTO</option>
                                             </select>
                                         </div>
                                         <br>
                                         <label class="control-label">Yang Menerima</label>
                                         <div>
-                                            <select class="form-select" name="yang_menerima" aria-label="Default select example">
-                                                <option value=""> </option>
+                                            <select class="custom-select form-control-border" name="yang_menerima" aria-label="Default select example">
+                                                <option value="">Pilih Penerima</option>
                                                 <option value="MOHAMMAD UMAM">MOHAMMAD UMAM</option>
                                             </select>
                                         </div>
                                         <br>
                                         <label class="control-label">Pindah Dari Kas</label>
                                         <div>
-                                            <select class="form-select" name="pindah_dari_kas" aria-label="Default select example">
-                                                <option value=""> </option>
+                                            <select class="custom-select form-control-border" name="pindah_dari_kas" aria-label="Default select example">
+                                                <option value="">Pilih Kas</option>
                                                 <option value="KAS KASIR SALES">KAS KASIR SALES</option>
                                             </select>
                                         </div>
                                         <br>
                                         <label class="control-label">Pindah Ke Kas</label>
                                         <div>
-                                            <select class="form-select" name="pindah_ke_kas" aria-label="Default select example">
-                                                <option value=""> </option>
+                                            <select class="custom-select form-control-border" name="pindah_ke_kas" aria-label="Default select example">
+                                                <option value="">Pilih Kas</option>
                                                 <option value="KAS BRANKAS">KAS BRANKAS</option>
                                             </select>
                                         </div>

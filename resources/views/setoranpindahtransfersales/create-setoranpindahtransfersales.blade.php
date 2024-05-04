@@ -45,8 +45,8 @@
                                         </div>
                                         <label class="control-label">Bank</label>
                                         <div>
-                                            <select class="form-select" name="bank" aria-label="Default select example">
-                                                <option value=""> </option>
+                                            <select class="custom-select form-control-border" name="bank" aria-label="Default select example">
+                                                <option value="">Pilih Bank</option>
                                                 <option value="KAS BANK BRI - ALIANSYAH 0066.01.001585.302">KAS BANK BRI - ALIANSYAH 0066.01.001585.302</option>
                                             </select>
                                         </div>
