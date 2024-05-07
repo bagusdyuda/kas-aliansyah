@@ -78,6 +78,15 @@ Route::middleware('auth')->group(function () {
     Route::post('/update-rinciannotasales/{id}', [\App\Http\Controllers\RincianNotaSalesController::class, 'update'])->name('update-rinciannotasales');
     Route::get('/delete-rinciannotasales/{id}', [\App\Http\Controllers\RincianNotaSalesController::class, 'destroy'])->name('delete-rinciannotasales');
 
+    //bank pemasukan
+    Route::get('/data-bankpemasukan', [\App\Http\Controllers\BankPemasukanController::class, 'index'])->name('data-bankpemasukan');
+    Route::get('/create-bankpemasukan', [\App\Http\Controllers\BankPemasukanController::class, 'create'])->name('create-bankpemasukan');
+    Route::post('/simpan-bankpemasukan', [\App\Http\Controllers\BankPemasukanController::class, 'store'])->name('simpan-bankpemasukan');
+    Route::get('/show-bankpemasukan/{id}', [\App\Http\Controllers\BankPemasukanController::class, 'show'])->name('show=bankpemasukan');
+    Route::get('/edit-bankpemasukan/{id}', [\App\Http\Controllers\BankPemasukanController::class, 'edit'])->name('edit-bankpemasukan');
+    Route::post('/update-bankpemasukan/{id}', [\App\Http\Controllers\BankPemasukanController::class, 'update'])->name('update-bankpemasukan');
+    Route::get('/delete-bankpemasukan/{id}', [\App\Http\Controllers\BankPemasukanController::class, 'destroy'])->name('delete-bankpemasukan');
+
     //debit bank
     Route::get('/data-debitmasuk', [\App\Http\Controllers\DebitmasukController::class, 'index'])->name('data-debitmasuk');
     Route::get('/create-debitmasuk', [\App\Http\Controllers\DebitmasukController::class, 'create'])->name('create-debitmasuk');
