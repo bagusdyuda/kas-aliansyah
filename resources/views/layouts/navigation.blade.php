@@ -108,7 +108,7 @@
                     <li class="nav-item">
                         <a href="{{ route('data-pindahkas') }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
-                            <p>Pindah Kas</p>
+                            <p>Pindah Kas Sales</p>
                         </a>
                     </li>
                 </ul>
@@ -157,6 +157,12 @@
                         <a href="{{ route('data-bankpemasukan') }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Bank Pemasukan</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('data-pindahkasbank') }}" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Pindah Kas Bank</p>
                         </a>
                     </li>
                 </ul>
