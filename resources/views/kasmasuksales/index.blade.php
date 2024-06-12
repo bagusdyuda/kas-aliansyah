@@ -31,7 +31,6 @@
                                 <tr>
                                     <th>#</th>
                                     <th>Tanggal</th>
-                                    <th>Nota</th>
                                     <th>Penyerah</th>
                                     <th>Id User</th>
                                     <th>Dari Kas</th>
